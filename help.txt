@@ -1,0 +1,233 @@
+shownews:   selectbol tudja kiválasztani a hirek mennyiseget
+shownews2:  beviteli mezokbol tudja beadni a megjelenitendo hirek mennyiseget, validalva van, csak szamokra, 5 nel kisebb szamokra.
+			ha nincs annyi hir a db-ben mint amit ker, akkor az osszeset de max 3 at ki!
+shownewsAll: kiadja az összes hirt, a szûrõnek mgfelelve,csökkenõ, növekvõ sorrendben
+paginatedNews:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form:
+  label: chartjs
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+
+        - name: chartType
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Type
+          options:
+            - name: bar
+              value: bar
+              label: Bar
+            - name: line
+              value: line
+              label: Line
+            - name: radar
+              value: radar
+              label: Radar
+            - name: polarArea
+              value: polarArea
+              label: Polar Area
+
+        - name: data
+          description: Enter data formatted as JSON valid for chart.js library.
+          class: info.magnolia.ui.form.field.definition.CodeFieldDefinition
+          rows: 8
+          label: Data - chartjs format
+
+    - name: tabHTML
+      label: HTML
+      fields:
+
+        - name: componentId
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: ID of component
+
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          label: egy kepet ide
+          targetWorkspace: dam
+          appName: assets
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # Automatically generated dialog with few most often used fileds (text, right, link, DAM image, multivalue, link to app, select). Feel free to modify them for your specific component.
+
+form:
+  label: card
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
+        - name: caption
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Image Caption
+
+        - name: desc
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Description
+
+        - name: internalLink
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: website
+          appName: pages
+          label: Select page
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+        - name: categories
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Select category
+          field:
+            name: linkField
+            class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+            targetWorkspace: category
+            appName: categories
+            identifierToPathConverter:
+              class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+        - name: option
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Option
+          options:
+            - label: A
+              value: a
+            - label: B
+              value: b
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    tabs:
+    - name: tabLink
+      label: Link
+      fields:
+        - name: filt
+          fieldType: select
+          label: mi alapján jelenitsuk meg a hireket?
+          options:
+            - name: one
+              value: 1
+              selected: true
+              label: datum
+
+            - name: auth
+              value: 2
+              label: author (abc)
+            
+        
+
+          radioGroup:
+            $type: radioButtonGroupField
+            datasource:
+              $type: optionListDatasource
+              options:
+              - name: csökkenõ
+                value: cs
+              - name: növekvõ
+                value: n
+    
+    
+    
+    
+    
+    form:
+      properties:
+        radioGroup:
+          $type: radioButtonGroupField
+          datasource:
+           $type: optionListDatasource
+           options:
+           - name: csökkenõ
+             value: cs
+           - name: növekvõ
+             value: n
+    

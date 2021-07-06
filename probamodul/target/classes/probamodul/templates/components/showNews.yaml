@@ -1,0 +1,7 @@
+title: showNews from select
+renderType: freemarker
+templateScript: /probamodul/templates/components/showNews.ftl
+dialog: probamodul:components/showNews
+visible: true
+
+

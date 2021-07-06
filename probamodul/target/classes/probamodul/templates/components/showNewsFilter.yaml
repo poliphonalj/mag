@@ -1,0 +1,6 @@
+title: showNews filtered
+renderType: freemarker
+templateScript: /probamodul/templates/components/showNewsFilter.ftl
+dialog: probamodul:components/showNewsFilter
+modelClass: gui.guidance.Filterer
+visible: true

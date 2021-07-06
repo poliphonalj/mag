@@ -1,0 +1,6 @@
+title: showNews all
+renderType: freemarker
+templateScript: /probamodul/templates/components/showNewsAll.ftl
+dialog: probamodul:components/showNewsAll
+modelClass: gui.guidance.ShowAll
+visible: true

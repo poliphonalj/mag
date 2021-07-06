@@ -1,0 +1,16 @@
+form:
+  properties:
+    title:
+      $type: textField
+      i18n: true
+    windowTitle:
+      $type: textField
+      i18n: true
+
+
+  commit:
+    label: save changes
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    label: cancel
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

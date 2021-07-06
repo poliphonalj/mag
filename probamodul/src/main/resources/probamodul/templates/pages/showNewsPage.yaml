@@ -1,0 +1,27 @@
+title: showNewsPage
+templateScript: /probamodul/templates/pages/showNewsPage.ftl
+renderType: freemarker
+dialog: probamodul:pages/showNewsPage
+
+visible: true
+
+areas:
+  main:
+    type: list
+    maxComponents: 3
+    layout: horizontal
+    availableComponents:
+      showNews:
+        id: probamodul:components/showNews
+
+      showNews2:
+        id: probamodul:components/showNews2
+
+      showNewsFilter:
+        id: probamodul:components/showNewsFilter
+
+      showNewsAll:
+        id: probamodul:components/showNewsAll
+
+      showPaginatedNews:
+        id: probamodul:components/showPaginatedNews

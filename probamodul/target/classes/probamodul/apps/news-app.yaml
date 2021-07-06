@@ -1,0 +1,28 @@
+!content-type:actualNews
+name: news-app 
+subApps:
+  browser:
+    class: info.magnolia.ui.contentapp.configuration.BrowserDescriptor
+    actions:
+      addFolder:
+        $type: addNodeAction
+        icon: icon-add-folder
+        nodeType: mgnl:content
+        availability:
+          root: true
+          nodeTypes:
+            - mgnl:content
+  
+  detail:
+    editor:
+      form:
+        tabs:
+          default:
+            fields:
+              - name: image
+                fieldType: link
+                targetWorkspace: dam
+                appName: assets
+                label: Select image
+                identifierToPathConverter: class:info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition: contentPreviewClass:info.magnolia.dam.app.ui.field.DamFilePreviewComponent

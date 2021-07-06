@@ -1,0 +1,25 @@
+form:
+  properties: 
+    hirszam:
+      $type: textField
+      width: 5
+      conversionErrorMessage: Ebbe a mezobe csak számérték adhato meg!
+      maxLength: 1
+      required: true
+      type: java.lang.Long
+      defaultValue: 2
+      description: kerem adja meg, hogy mennyi news-t szeretne megjeleniteni!
+      placeholder: 2
+      converterClass: com.vaadin.data.converter.StringToLongConverter
+      validators:
+            - name: hirszaml
+              class: info.magnolia.ui.field.RegexpValidatorDefinition
+              pattern: ^[1-5]$
+              errorMessage: 1-5 ig adhat meg egy számot!
+
+  commit:
+    label: save changes
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    label: cancel
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

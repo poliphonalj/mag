@@ -1,0 +1,5 @@
+title: showNews from input field
+renderType: freemarker
+templateScript: /probamodul/templates/components/showNews2.ftl
+dialog: probamodul:components/showNews2
+visible: true

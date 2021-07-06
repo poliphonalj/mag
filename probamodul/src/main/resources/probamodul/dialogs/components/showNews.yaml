@@ -1,0 +1,28 @@
+form:
+
+  tabs:
+    - name: tabLink
+      label: Link
+      fields:
+        - name: numofnews
+          fieldType: select
+          label: hany hir jelenjen meg?
+          options:
+            - name: one
+              value: 1
+              selected: true
+              label: egy
+            - name: two
+              value: 2
+              label: ketto
+            - name: three
+              value: 3
+              label: harom
+
+actions:
+  commit:
+    label: save changes
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    label: cancel
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

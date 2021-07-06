@@ -1,0 +1,30 @@
+datasource: 
+  workspace: news-app
+  rootPath: /
+  namespaces:
+    lib: https://www.magnolia-travel.com/jcr/1.0/lib
+  autoCreate: true
+
+model: 
+  nodeType: lib:actualNews
+  properties: 
+    - name: intro
+      defaultValue: intro comes here!
+      required: true
+
+    - name: text
+      type: richText
+      defaultValue: content comes here!
+      required: true
+ 
+    - name: author
+      defaultValue: authors name
+      required: true
+
+    - name: publish_date 
+      type: Date
+
+
+    - name: image
+      type: asset
+      

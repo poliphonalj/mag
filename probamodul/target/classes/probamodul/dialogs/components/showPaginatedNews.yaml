@@ -1,0 +1,31 @@
+form:
+
+  properties:
+    radioGroup2:
+      $type: radioButtonGroupField
+      i18n: true
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: csok
+            label: csökkenõ
+            i18n: true
+            value: cs
+             
+          - name: növekvõ
+            value: n
+            i18n: true
+           
+   
+    filt2:
+      $type: comboBoxField
+      i18n: true
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: szerzo szerinti abc
+            value: abc
+          - name: idorend
+            value: ido
+
+
